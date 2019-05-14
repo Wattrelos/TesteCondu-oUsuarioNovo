@@ -1,4 +1,4 @@
-package TesteSelenium;
+package TesteSelenium.tentando;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.Assert;
@@ -14,7 +14,6 @@ public class TestesSimulacaodecompraClienteLogin {
 	@Test
 	public void testeSimulacaoCompraLogin() {
 		System.setProperty("webdriver.gecko.driver", "/install/DESENVOLVIMENTO/Geckodrivers/geckodriver.exe");
-//		System.setProperty("webdriver.chrome.driver", "/Users/wcaquino/Downloads/chromedriver");
 //		WebDriver driver = new FirefoxDriver();
 //		WebDriver driver = new ChromeDriver();
 		WebDriver driver = new FirefoxDriver();
@@ -32,10 +31,15 @@ public class TestesSimulacaodecompraClienteLogin {
 		driver.findElement(By.id("login-senha")).sendKeys("123Fatec");
 		driver.findElement(By.id("login")).click();
 		// Pequena pausa para esperar a tela renderizar.
-		driver.manage().timeouts().implicitlyWait(200, TimeUnit.MILLISECONDS);
+		driver.manage().timeouts().implicitlyWait(500, TimeUnit.MILLISECONDS);
 		
 		// Deve retornar o nome do email, sem arroba.
-		Assert.assertEquals("anabellesartorelli", driver.findElement(By.id("dropdownMenuLink")).getText());		
+		Assert.assertEquals("anabellesartorelli", driver.findElement(By.id("dropdownMenuLink")).getText());
+		try {
+	        Thread.sleep(5*1000);
+	    } catch (InterruptedException e) {
+	        e.printStackTrace();
+	    }
 		driver.quit();
 	}
 }

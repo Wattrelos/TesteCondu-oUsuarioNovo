@@ -1,4 +1,4 @@
-package TesteSelenium;
+package TesteSelenium.tentando;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.Assert;
@@ -16,8 +16,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.sun.org.apache.xerces.internal.impl.xpath.XPath;
 
-public class TestesSimulacaodecompraClienteCadastradoPatriciaTavares {
+public class TestesSimulacaodecompraClienteCadastradoPatriciaTavaresComEnderecoSemCartao {
 	
+	/*
+	 * Este teste é para o cliente já com endereço, mas sem cartão cadastrado.
+	 * 
+	 */
 	@Test
 	public void testeSimulacaoCompraLogin() {		
 		
@@ -39,7 +43,7 @@ public class TestesSimulacaodecompraClienteCadastradoPatriciaTavares {
 		String clienteComplemento = "casa 2";
 		// Cartão de crédito
 		String clienteCartaoNome = "PATRICIA TAVARES";
-		String clienteCartaoNumero = "5348569034150411";
+		String clienteCartaoNumero = "5373774571439627";
 		String clienteCartaoDataValidade = "2023-08-11";
 		String clienteCartaoCvv = "421";
 		
